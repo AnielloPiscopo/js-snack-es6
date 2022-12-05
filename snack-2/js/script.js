@@ -75,18 +75,20 @@ const autoADiesel = [];
 const autoRimanenti = [];
 
 
+
 for(let i=0 ; i<automobili.length ; i++) {
-    switch (automobili[i]['alimentazione']){
+    let automobile = automobili[i];
+    switch (automobile['alimentazione']){
         case 'benzina':
-            autoABenzina.push(automobili[i]);
+            autoABenzina.push(automobile);
             break;
 
         case 'diesel':
-            autoADiesel.push(automobili[i]);
+            autoADiesel.push(automobile);
             break;
 
         default:
-            autoRimanenti.push(automobili[i]);
+            autoRimanenti.push(automobile);
     }
 }
 
