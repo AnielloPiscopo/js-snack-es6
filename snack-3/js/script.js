@@ -10,62 +10,62 @@
 const zucchini = [
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     },
 
     {
         variety: 'ASJDASKD',
-        weight: 50,
-        length: 10,
+        weight: '50g',
+        length: '10cm',
     }
 ]
 
@@ -75,8 +75,12 @@ let totalLength = 0;
 
 for(let i=0 ; i<zucchini.length ; i++){
     let zuchini = zucchini[i];
-    totalWeight += zuchini.weight;
-    totalLength += zuchini['length'];
+
+    zuchini.weight = zuchini.weight.replace('g','');
+    zuchini['length'] = zuchini['length'].replace('cm','');
+
+    totalWeight += parseFloat(zuchini.weight,10);
+    totalLength += parseFloat(zuchini['length'],10);
 }
 
 let mediaWeight = totalWeight/zucchini.length;
