@@ -27,11 +27,9 @@ const students = [
 
 for(let i=0 ; i<students.length ; i++){
     let student = students[i];
-
-    for(let key in students){
-        console.log(student);
-        console.log(student['name']);
-        console.log(student['last-name']);
-        console.log(student['age']);
+    console.log(student);
+    
+    for(let key in student){
+        console.log(student[key]);
     }
 }
