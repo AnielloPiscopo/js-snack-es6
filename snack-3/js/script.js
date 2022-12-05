@@ -71,10 +71,18 @@ const zucchini = [
 
 
 let totalWeight = 0;
+let totalLength = 0;
 
 for(let i=0 ; i<zucchini.length ; i++){
     let zuchini = zucchini[i];
     totalWeight += zuchini.weight;
+    totalLength += zuchini['length'];
 }
 
-console.log(totalWeight)
+let mediaWeight = totalWeight/zucchini.length;
+let mediaLength = totalLength/zucchini.length;
+
+console.log(totalWeight);
+console.log(totalLength);
+console.log(mediaWeight);
+console.log(mediaLength);
