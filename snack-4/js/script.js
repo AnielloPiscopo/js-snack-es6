@@ -26,6 +26,16 @@ const animals = [
 ]
 
 
-
+//* MAIN TRACE
 const mammals = animals.filter(mammal => mammal.classe === 'mammiferi');
 console.log(mammals);
+
+// * BONUS 1
+const animalsListToAlmostUppercase = animals.map(animal => {
+    for(let key in animal){
+        animal[key] = animal[key].charAt(0) + animal[key].substr(1,animal.length).toUpperCase();
+    }
+    return animal
+})
+
+console.log(animalsListToAlmostUppercase)
